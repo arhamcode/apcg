@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ardeviot Polygon Coordinat Generator</title>
+</head>
+<body>
+<div class="w3-container">
+    <div class="w3-row w3-section">
+        <div class="w3-col w3-twothird">
+            <div class="w3-row">
+                <div class="w3-col w3-half">
+                    <button type="button" onclick="reCenter()" class="w3-btn w3-blue">Recenter</button>
+                    <button type="button" onclick="toogleDrawingMode()" class="w3-btn w3-blue">Toggle Edit</button>
+                    <button type="button" onclick="clearOverlay()" class="w3-btn w3-blue">Clear</button>
+                </div>
+                <textarea name="coordinate" id="coordinateVal" class="w3-hide"></textarea>
+            </div>
+        </div>
+
+        <div class="w3-col w3-third">
+            <input placeholder="Search Location" id="search-place" class="w3-input w3-border">
+        </div>
+    </div>
+    
+    <div class="w3-row w3-section">
+        <div class="w3-col w3-half">
+            <div id="google-maps"></div>
+        </div>
+        <div class="w3-col w3-half">
+            <textarea id="info" class="w3-input w3-border"></textarea>
+        </div>
+    </div>        
+</div>
+
+<script src="jquery-3.3.1.min.js"></script>
+<script src="index.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_HERE&libraries=geometry,drawing,places&callback=loadMap"></script>
+</body>
+</html>
